@@ -6,10 +6,8 @@ using WishList.Domains;
 
 namespace WishList.Interfaces
 {
-    interface IusuarioRepository
+    interface IUsuarioRepository
     {
-        List<Usuario> Listar();
-
-        Usuario BuscarPorID(int id);
+        
     }
 }

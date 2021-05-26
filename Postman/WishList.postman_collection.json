@@ -1,0 +1,79 @@
+{
+	"info": {
+		"_postman_id": "eab3641a-1980-4b54-a4f7-57c61d164ae2",
+		"name": "WishList",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "WishList.Listar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/desejos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"desejos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "WishList.Cadastrar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idUsuario\" : 3,\r\n    \"descricao\" : \"Me tornar um desenvolvedor\",\r\n    \"dataCriacao\" : \"2014-05-03\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/desejos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"desejos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "WishList.ListarPorId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/desejos/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"desejos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

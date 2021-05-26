@@ -6,12 +6,13 @@ using WishList.Domains;
 
 namespace WishList.Interfaces
 {
-    interface IdesejoRepository
+    interface IDesejoRepository
     {
         List<Desejo> Listar();
 
-        void Cadastrar(Desejo novoDesejo);
+        List<Desejo> Listar(int id);
 
+        void Cadastrar(Desejo novoDesejo);
 
     }
 }

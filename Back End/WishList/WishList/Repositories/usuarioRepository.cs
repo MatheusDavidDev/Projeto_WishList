@@ -9,18 +9,8 @@ using WishList.Interfaces;
 
 namespace WishList.Repositories
 {
-    public class usuarioRepository : IusuarioRepository
+    public class UsuarioRepository : IUsuarioRepository
     {
-        WishListContext ctx = new WishListContext();
-        public Usuario BuscarPorID(int id)
-        {
-            return ctx.Usuarios
-                .Include(u => u.)
-        }
-
-        public List<Usuario> Listar()
-        {
-            throw new NotImplementedException();
-        }
+       
     }
 }
