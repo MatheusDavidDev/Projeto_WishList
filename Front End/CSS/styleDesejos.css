@@ -1,0 +1,176 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url(/Images/Fundo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    font-family: 'Rochester', cursive;
+    height: 2500px;
+}
+
+.desejos{
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+    margin-top: 300px;
+}
+
+.escrever{
+    width: 650px;
+    height: 900px;
+    
+}
+
+.percaminho{
+    background-image: url(/Images/Rectangle\ 1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.percaminho p{
+    width: 450px;
+    font-size: 55px;
+    font-weight: 550;
+    text-align: center;
+}
+
+.campo{
+    height: 250px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    margin-top: 50px;
+    
+}
+
+.email{
+    height: 30px;
+    width: 300px;
+}
+
+.desejo{
+    height: 100px;
+    width: 300px;
+}
+
+.botao{
+    height: 60px;
+    width: 200px;
+
+    font-family: 'Rochester', cursive;
+    font-size: 30px;
+    font-weight: bold;
+
+    background-image: linear-gradient(140deg, #FFE383, #77300A);
+    border-radius: 10px;   
+}
+
+.divisao{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.listas{
+    height: 1000px;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.login{
+    width: 1000px;
+    height: 500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+
+    
+}
+
+.login h2{
+
+    height: 250px;
+    width: 600px;
+
+    font-size: 75px;
+    text-align: center;
+}
+
+.email2{
+    height: 40px;
+    width: 300px;
+}
+
+.senha{
+    height: 40px;
+    width: 300px;
+}
+
+.listagem{
+    height: 300px;
+    width: 1000px;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tabela{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+
+    height: 150px;
+
+}
+
+.dadosNome{
+    background-image: url(/Images/fundo-abstrato-bege-material-grunge-marrom-papel-velho_213524-129.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    width: 1000px;
+    height: 60px;
+
+    display: flex;
+    justify-content: space-around;
+
+    font-size: 40px;
+}
+
+.dados{
+    background-image: url(/Images/fundo-abstrato-bege-material-grunge-marrom-papel-velho_213524-129.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    width: 1000px;
+    height: 60px;
+
+    display: flex;
+    justify-content: space-around;
+
+    font-size: 40px;
+}
