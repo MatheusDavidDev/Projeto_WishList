@@ -10,7 +10,7 @@ namespace WishList.Interfaces
     {
         List<Desejo> Listar();
 
-        List<Desejo> Listar(int id);
+        List<Desejo> Listar(Usuario user);
 
         void Cadastrar(Desejo novoDesejo);
 

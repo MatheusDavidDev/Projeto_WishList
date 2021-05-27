@@ -55,12 +55,24 @@
 			"response": []
 		},
 		{
-			"name": "WishList.ListarPorId",
+			"name": "WishList.ListarMinhas",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
 			"request": {
 				"method": "GET",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"usuario@gmail.com\",\r\n    \"senha\" : \"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
-					"raw": "http://localhost:5000/api/desejos/1",
+					"raw": "http://localhost:5000/api/desejos/minhas",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -69,7 +81,7 @@
 					"path": [
 						"api",
 						"desejos",
-						"1"
+						"minhas"
 					]
 				}
 			},

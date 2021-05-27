@@ -50,11 +50,11 @@ namespace WishList.Repositories
         }
 
         /// <summary>
-        /// Método para listar os desejos de um determinado usuário
+        /// Método para listar os desejos de um determinado usuario
         /// </summary>
-        /// <param name="id">id do usuário que será listado seus desejos</param>
-        /// <returns></returns>
-        public List<Desejo> Listar(int id)
+        /// <param name="user">objeto tipo usuario que será passado no corpo da requisição</param>
+        /// <returns>Lista dos desejos do usuário buscado</returns>
+        public List<Desejo> Listar(Usuario user)
         {
             return ctx.Desejos
 
@@ -69,11 +69,14 @@ namespace WishList.Repositories
                     idUsuarioNavigation = new Usuario
                     {
                         idUsuario = d.idUsuarioNavigation.idUsuario,
-                        email = d.idUsuarioNavigation.email
+                        email = d.idUsuarioNavigation.email,
+                        senha = d.idUsuarioNavigation.senha,
                     }
                 })
 
-                .Where(d => d.idUsuarioNavigation.idUsuario == id)
+                //.Where(d => d.idUsuarioNavigation.idUsuario == id)
+
+                .Where(d => d.idUsuarioNavigation.email == user.email && d.idUsuarioNavigation.senha == user.senha)
 
                 .ToList();
         }

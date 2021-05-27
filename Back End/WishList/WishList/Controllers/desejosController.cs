@@ -40,16 +40,16 @@ namespace WishList.Controllers
         }
 
         /// <summary>
-        /// Lista os desejos de um determinado usuário
+        /// Método para listar os desejos de um determinado usuario
         /// </summary>
-        /// <param name="id">id do usuário que será listado seus desejos</param>
-        /// <returns>lista de desejos de um determinado usuário</returns>
-        [HttpGet("{id}")]
-        public IActionResult GetById(int id)
+        /// <param name="user">objeto tipo usuario que será passado no corpo da requisição</param>
+        /// <returns>Lista dos desejos do usuário buscado</returns>    
+        [HttpGet("Minhas")]
+        public IActionResult GetMy(Usuario user)
         {
             try
             {
-                return Ok(_desejoRepository.Listar(id));
+                return Ok(_desejoRepository.Listar(user));
             }
             catch (Exception erro)
             {
