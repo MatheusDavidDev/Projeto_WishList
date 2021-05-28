@@ -11,6 +11,11 @@ namespace WishList.Repositories
 {
     public class UsuarioRepository : IUsuarioRepository
     {
-       
+        WishListContext ctx = new WishListContext();
+
+        public Usuario Login(string email, string senha)
+        {
+            return ctx.Usuarios.FirstOrDefault(u => u.email == email && u.senha == senha);
+        }
     }
 }

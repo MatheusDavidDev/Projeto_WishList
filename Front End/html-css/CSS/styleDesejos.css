@@ -6,7 +6,7 @@
 body{
     background-image: url(/Images/fundo.png);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size:cover;
     background-position: top;
     font-family: 'Rochester', cursive;
     height: 2500px;
