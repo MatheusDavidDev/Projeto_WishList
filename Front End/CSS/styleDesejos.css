@@ -4,7 +4,7 @@
 }
 
 body{
-    background-image: url(/Images/Fundo.png);
+    background-image: url(/Images/fundo.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
@@ -13,15 +13,31 @@ body{
 }
 
 .desejos{
+
+    height: 800px;
+
     display: flex;
     align-items: center;
     justify-content: center;   
-    margin-top: 300px;
+    
+}
+
+
+
+.genio img{
+    
+    width: 350px;
 }
 
 .escrever{
-    width: 650px;
+    width: 900px;
     height: 900px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    
     
 }
 
@@ -30,51 +46,57 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     
-    
-    width: 100%;
-    height: 100%;
+    width: 450px;
+    height: 650px;
 
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
+    
+    
 }
 
 .percaminho p{
     width: 450px;
-    font-size: 55px;
+    font-size: 60px;
     font-weight: 550;
     text-align: center;
+    
+    margin-top: 50px;
+    
 }
 
 .campo{
-    height: 250px;
+    height: 300px;
 
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
 
-    margin-top: 50px;
+    /*margin-top: px;*/
     
 }
 
-.email{
-    height: 30px;
-    width: 300px;
-}
 
 .desejo{
-    height: 100px;
-    width: 300px;
+    height: 150px;
+    width: 250px;
+    
+    font-size: 20px;
+
+    resize: none;
 }
 
+
 .botao{
-    height: 60px;
-    width: 200px;
+    height: 50px;
+    width: 150px;
 
     font-family: 'Rochester', cursive;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: bold;
 
     background-image: linear-gradient(140deg, #FFE383, #77300A);
@@ -87,54 +109,82 @@ body{
     justify-content: center;
 }
 
-.listas{
-    height: 1000px;
-    width: 100%;
-
+.lista{
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    background-color: ivory;
 }
 
-.login{
-    width: 1000px;
-    height: 500px;
+.listas{
+    height: 400px;
+    width: 1500px;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
 
+    background-color: lawngreen;
+}
+
+.titulo{
+    height: 100px;
+    width: 1000px;
+
+    display: flex;
+    justify-content: center;
+
+    background-color: lightcyan;
+}
+
+.titulo h2{
+    font-size: 60px;
+}
+
+
+.login{
+    width: 600px;
+    height: 350px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+
+    
     
 }
 
 .login h2{
+    height: 100px;
+    width: 500px;
 
-    height: 250px;
-    width: 600px;
-
-    font-size: 75px;
+    font-size: 70px;
     text-align: center;
+    font-weight: 200;
 }
 
 .email2{
-    height: 40px;
+    height: 30px;
     width: 300px;
+    border-radius: 5px;
 }
 
 .senha{
-    height: 40px;
+    height: 30px;
     width: 300px;
+    border-radius: 5px;
 }
 
 .listagem{
-    height: 300px;
-    width: 1000px;
+    height: 100%;
+    width: 1500px;
 
 
     display: flex;
     align-items: center;
     justify-content: center;
+
+    background-color: lightcoral;
 }
 
 .tabela{
@@ -152,7 +202,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
-    width: 1000px;
+    width: 1100px;
     height: 60px;
 
     display: flex;
@@ -166,11 +216,14 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
-    width: 1000px;
+    width: 1100px;
     height: 60px;
 
     display: flex;
     justify-content: space-around;
+    flex-direction: row;
+    
 
     font-size: 40px;
 }
+
