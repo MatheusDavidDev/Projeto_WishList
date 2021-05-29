@@ -36,7 +36,7 @@ class Wish extends Component{
         console.log('descricao: ' + this.state.descricao)
     }
 
-    data = async (log) =>{
+    dataCriacao = async (log) =>{
         await this.setState({dataCriacao : log.target.value})
         console.log('data de criação ' + this.state.dataCriacao)
     }
@@ -125,6 +125,8 @@ class Wish extends Component{
         .then(this.listar)
     }
 
+    
+
     // renderização da página
     render(){
         return( 
@@ -186,13 +188,13 @@ class Wish extends Component{
                             </thead>
 
                             <tbody>
-                                {
+                                {                                    
                                     this.state.desejos.map( (w) => {
                                         return(
                                             <tr key={w.idDesejo}>
                                                 <td>{w.idDesejo}</td>
                                                 <td>{w.descricao}</td>
-                                                <td>{w.dataCriacao}</td>
+                                                <td>{new Date(w.dataCriacao).toLocaleDateString()}</td>
                                                 <td><button id="excluir" onClick={() => this.excluir(w)}>Excluir</button></td>
                                             </tr>
                                         )  
