@@ -49,6 +49,8 @@ namespace WishList.Repositories
         /// <param name="novoDesejo">objeto do tipo Desejo</param>
         public void Cadastrar(Desejo novoDesejo)
         {
+            novoDesejo.dataCriacao = DateTime.Now;
+
             ctx.Desejos.Add(novoDesejo);
 
             ctx.SaveChanges();

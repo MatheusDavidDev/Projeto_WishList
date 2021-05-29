@@ -1,5 +1,10 @@
 import { Component } from 'react';
 
+import Genio from "./Images/image 4.png";
+import Divisor from "./Images/image 5.png";
+import Lampada from "./Images/Lampada.png";
+
+import './style.css';
 
 class Wish extends Component{
     constructor(props){
@@ -13,8 +18,7 @@ class Wish extends Component{
             descricao : '',
             dataCriacao : ''
         }
-    }
-    
+    }    
 
     // métodos para setar os valores passados nos inputs
     email = async (log) =>{
@@ -123,76 +127,84 @@ class Wish extends Component{
 
     // renderização da página
     render(){
-        return(
+        return( 
+            
             <div>                
                 <header>
-                    <div>
-                        <h2>Login</h2>
-                        <form onSubmit={this.login}>
-                            <input
-                                type='text'
-                                value={this.state.email}
-                                onChange={this.email}
-                                placeholder='Email'
-                            />
-                            <input
-                                type='text'
-                                value={this.state.senha}
-                                onChange={this.senha}
-                                placeholder='Senha'
-                            />
-                            <button type='submit'>Logar</button>
-                        </form>
-                    </div>                    
+                <img id="genio" src={Genio} alt="Genio"/>
+                <img id="lampada" src={Lampada} alt="Lampada"/>
                 </header>
 
-                <section>
-                    <h2>Enviar desejo</h2>
-                    <div>
-                        <form onSubmit={this.cadastrar}>
-                            <h2>Descrição</h2>
-                            <input
-                                type='text'
-                                value={this.state.descricao}
-                                onChange={this.descricao}
-                                placeholder='Escreva o desejo'
-                            />
-                            <button type='submit'>Enviar</button>
-                        </form>
-                    </div>
-
-                    
-                    <div>
-                        <h2>Lista dos Desejos</h2>
-                        <div>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th>#</th>                                        
-                                        <th>Descrição</th>
-                                        <th>Data Criação</th>                                        
-                                    </tr>
-                                </thead>
-
-                                <tbody>
-                                    {
-                                        this.state.desejos.map( (w) => {
-                                            return(
-                                                <tr key={w.idDesejo}>
-                                                    <td>{w.idDesejo}</td>
-                                                    <td>{w.descricao}</td>
-                                                    <td>{w.dataCriacao}</td>
-                                                    <td><button onClick={() => this.excluir(w)}>Excluir</button></td>
-                                                </tr>
-                                            )  
-                                        } )
-                                    }
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>                    
+                <section className="input">                    
+                    <h2>Login</h2>
+                    <form onSubmit={this.login}>
+                        <input
+                            type='text'
+                            value={this.state.email}
+                            onChange={this.email}
+                            placeholder='Email'
+                        />
+                        <input
+                            type='password'
+                            value={this.state.senha}
+                            onChange={this.senha}
+                            placeholder='Senha'
+                        />
+                        <button type='submit'>Logar</button>
+                    </form>
+                                        
                 </section>
+
+                
+
+                <section className="input">
+                    <h2 className="h2">Enviar desejo</h2>                    
+                    <form onSubmit={this.cadastrar}>                        
+                        <input
+                            type='text'
+                            value={this.state.descricao}
+                            onChange={this.descricao}
+                            placeholder='Escreva o desejo'
+                        />
+                        <button type='submit'>Enviar</button>
+                    </form>                  
+
+                </section>
+                
+                <img id="divisor" src={Divisor} alt="Divisor"/>
+                    
+                <section id="secao-tabela">
+                    <h2>Lista dos Desejos</h2>
+                    <div id="tabela">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>#</th>                                        
+                                    <th>Descrição</th>
+                                    <th>Data Criação</th>                                        
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                {
+                                    this.state.desejos.map( (w) => {
+                                        return(
+                                            <tr key={w.idDesejo}>
+                                                <td>{w.idDesejo}</td>
+                                                <td>{w.descricao}</td>
+                                                <td>{w.dataCriacao}</td>
+                                                <td><button id="excluir" onClick={() => this.excluir(w)}>Excluir</button></td>
+                                            </tr>
+                                        )  
+                                    } )
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </section> 
+
             </div>
+
         )
     }
 }
